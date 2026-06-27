@@ -23,6 +23,8 @@ db.init_app(app)
 
 with app.app_context():
     db.create_all()
+    from seed import seed_database
+    seed_database()
 
 
 # ---------------------------------------------------------------------------
